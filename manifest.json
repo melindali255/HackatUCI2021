@@ -2,7 +2,7 @@
     "name": "YouTube Comments Example",
     "version": "1.0",
     "description": "Build an Extension!",
-    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "permissions": ["activeTab", "declarativeContent", "storage", "http://localhost/"],
     "content_scripts": [
       {
         "matches": ["*://*.youtube.com/*"],
@@ -10,7 +10,7 @@
       }
     ],
     "background": {
-      "scripts": ["background.js"],
+      "scripts": ["jquery-3.5.1.min", "background.js"],
       "persistent": false
     },
     "page_action": {
