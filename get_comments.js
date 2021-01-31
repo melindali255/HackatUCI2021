@@ -11,7 +11,7 @@ $(document).on('mouseover mouseout', '#comments', function() {
 
     /* Remove entire comment */
     let comment_threads = document.getElementsByTagName("ytd-comment-thread-renderer");
-
+    let comment_array = []
     // console.log("length of comments threads: " + comment_threads.length);
 
     for (let i = 0; i < comment_threads.length; i++) {
@@ -20,5 +20,13 @@ $(document).on('mouseover mouseout', '#comments', function() {
             // comment.style["background-color"] = "red";
             comment_threads[i].parentNode.removeChild(comment_threads[i]);
         }
+        comment_array.push(comment.textContent);
     }
+
+    // console.log(comment_array);
+
+    fetch('http://localhost:5000/verify-comments?comments=' + JSON.stringify(comment_array)).then(response => response.json()).then(response => {
+		console.log(response);
+	})
+
 });

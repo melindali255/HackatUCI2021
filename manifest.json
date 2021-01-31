@@ -2,7 +2,7 @@
     "name": "YouTube Comments Example",
     "version": "1.0",
     "description": "Build an Extension!",
-    "permissions": ["activeTab", "declarativeContent", "storage", "http://localhost/"],
+    "permissions": ["activeTab", "declarativeContent", "storage", "nativeMessaging"],
     "content_scripts": [
       {
         "matches": ["*://*.youtube.com/*"],
