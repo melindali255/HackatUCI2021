@@ -22,7 +22,7 @@ def verify():
 
 
 def really_long_machine_learning_thing(array_of_comments: list):
-    for i in range(len(array) - 1, -1, -1):
+    for i in range(len(array_of_comments) - 1, -1, -1):
         polarity = TextBlob(array_of_comments[i]).sentiment.polarity
         if polarity < 0:
             array_of_comments.pop()
