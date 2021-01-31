@@ -1,7 +1,7 @@
 {
-    "name": "YouTube Comments Example",
+    "name": "Hide YouTube Hate Comments",
     "version": "1.0",
-    "description": "Build an Extension!",
+    "description": "Remove hateful YouTube comments with this extension!",
     "permissions": ["activeTab", "declarativeContent", "storage", "nativeMessaging"],
     "content_scripts": [
       {
